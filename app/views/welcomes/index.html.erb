@@ -1,0 +1,50 @@
+ <head>
+<script src="https://npmcdn.com/masonry-layout@4.0.0/dist/masonry.pkgd.min.js"></script>
+ </head>        
+ 
+
+ <div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="#"></a></p>
+      <p><a href="#"></a></p>
+      <p><a href="#"></a></p>
+    </div>
+  </div>
+            <% if user_signed_in? %>
+                  <% if current_user.admin? %>
+                    <a href="/welcomes/new">
+                        <div style="font-size:16px; margin-bottom:1px; height:510.84px !important; width:300px !important; margin: 3px 10px 10px 10px; border:1px solid black; display:inline-block; float:left; vertical-align:top;">
+                          <p style="text-align: center;vertical-align: middle;line-height: 525.84px; font-weight: bold;">Write Blog Post</p>
+                        </div>
+                    </a>
+                  <% end %>
+            <% end %>
+
+
+
+ <div style="" class="hero-grid__item">
+ <% @welcomes.each do |welcome| %>
+ <div style="display:inline-block; float:left; padding-left:10px; height:525.84px;">
+ <a href="http://tympanus.net/Development/GridLoadingEffects/index2.html" class="hero__example-link">
+ <img style="width:300px;"src="http://image.shutterstock.com/display_pic_with_logo/59809/278710634/stock-vector-snellen-chart-eye-test-on-background-of-blurred-human-eye-human-eye-vector-illustration-of-278710634.jpg"></img>
+ <div style=""><%= welcome.title %></div>
+ <div style="max-height:100px; word-wrap: break-word; overflow:hidden; margin-top:0px;"><%= raw(welcome.message) %></div>
+ <div style=" width:12px; background: rgba(255,255,255,0.4); float:right;">...</div>
+ </a>
+ <div style="font-size:9px;"><%= welcome.created_at %></div>
+ <%= link_to 'Destroy', welcome, method: :delete, data: { confirm: 'Are you sure?' } %>
+ <%= link_to 'Show', welcome %>
+ <%= link_to 'Edit', edit_welcome_path(welcome) %>
+ </div>
+ <% end %>
+ </div>
+ </div>
+ </div>
+ <hr>
+ <b>TeenFlight.ca</b><br>
+ Connecting teens with aviation...
+
+<footer class="container-fluid text-center">
+</footer>
+         
