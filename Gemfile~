@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 #Administration
-gem 'activeadmin'
-
+gem 'activeadmin', github: 'activeadmin'
+gem  'devise', '~> 3.5'
 
 #Bootstrap Sass
 gem 'bootstrap-sass', '~> 3.3.6'

@@ -5,6 +5,7 @@ gem 'activeadmin', github: 'activeadmin'
 gem  'devise', '~> 3.5'
 
 #Bootstrap Sass
+gem 'bootstrap'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'autoprefixer-rails', ">= 5.2.1", "< 6.1"
 
