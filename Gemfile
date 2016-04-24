@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 #Administration
 gem 'activeadmin', github: 'activeadmin'
 gem  'devise', '~> 3.5'
-
+gem 'rails_12factor'
 #Bootstrap Sass
 gem 'bootstrap'
 gem 'bootstrap-sass', '~> 3.3.6'
