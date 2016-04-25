@@ -1,13 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
   <%= @welcome.name %>
 </p>
 
 <p>
-  <strong>Message:</strong>
   <%= @welcome.message %>
 </p>
+             <% if user_signed_in? %>
+                  <% if current_user.admin? %>
 <%= link_to 'Edit', edit_welcome_path(@welcome) %> |
+<% end %>
+<% end %>
 <%= link_to 'Back', welcomes_path %>
