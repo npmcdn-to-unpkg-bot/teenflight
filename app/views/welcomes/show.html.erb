@@ -14,7 +14,7 @@
 <% end %>
 <%= link_to 'Back', welcomes_path %>
 
-
+             <% if user_signed_in? %>
 <div id="disqus_thread"></div>
 <script>
     /**
@@ -37,3 +37,5 @@
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<% else %>
+	You must be signed in to comment
