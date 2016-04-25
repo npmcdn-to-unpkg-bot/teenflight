@@ -21,7 +21,11 @@
                 <% end %>
               </ul>
             </div>
-        <div style="padding-left:1px;"><%= link_to 'New Event', new_index_path %></div>
+              <% if user_signed_in? %>
+                <% if current_user.admin? %>
+                  <div style="padding-left:1px;"><%= link_to 'New Event', new_index_path %></div>
+                <% end %>
+              <% end %>
       </div>
 
 
