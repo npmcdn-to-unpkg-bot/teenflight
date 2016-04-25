@@ -33,9 +33,13 @@
  <div style=" width:12px; background: rgba(255,255,255,0.4); float:right;">...</div>
  </a>
  <div style="font-size:9px;"><%= welcome.created_at %></div>
+             <% if user_signed_in? %>
+                  <% if current_user.admin? %>
  <%= link_to 'Destroy', welcome, method: :delete, data: { confirm: 'Are you sure?' } %>
  <%= link_to 'Show', welcome %>
  <%= link_to 'Edit', edit_welcome_path(welcome) %>
+ <% end %>
+ <% end %>
  </div>
  <% end %>
  </div>
