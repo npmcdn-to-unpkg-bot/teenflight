@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get 'user/signup'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  root 'index#index'
+  root 'indices#index'
 
    devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
