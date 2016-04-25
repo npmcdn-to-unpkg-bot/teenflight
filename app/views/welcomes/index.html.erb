@@ -27,8 +27,7 @@
  <% @welcomes.each do |welcome| %>
  <div style="display:inline-block; float:left; padding-left:10px; height:525.84px; width:300px;">
  <img style="width:300px;"src="http://www.gama-ksa.com/wp-content/uploads/2014/11/22520129_l.jpg"></img>
-  <%= link_to  welcome.title , welcome %>
- <div style="max-height:100px; word-wrap: break-word; overflow:hidden; margin-top:0px;"><%= raw(welcome.message) %></div>
+  <%= link_to  raw(welcome.message) , welcome %>
  <div style=" width:12px; background: rgba(255,255,255,0.4); float:right;">...</div>
  </a>
  <div style="font-size:9px;"><%= welcome.created_at %></div>
