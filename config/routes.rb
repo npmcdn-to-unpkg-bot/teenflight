@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'index/index'
+
   resources :welcomes
   get 'pages/contact'
   get 'pages/about'
@@ -8,7 +10,7 @@ Rails.application.routes.draw do
   get 'user/signup'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  root 'welcomes#index'
+  root 'index#index'
 
    devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
