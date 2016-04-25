@@ -1,5 +1,8 @@
  <head>
 <script src="https://npmcdn.com/masonry-layout@4.0.0/dist/masonry.pkgd.min.js"></script>
+ <script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "c782e29b-9ce8-4d9c-a139-4c4ab3cf9707", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
  </head>        
  
 
@@ -31,8 +34,15 @@
  <div style=" width:12px; background: rgba(255,255,255,0.4); float:right;">...</div>
  </a>
  <div style="font-size:9px;"><%= welcome.created_at %></div>
+ <span class='st_sharethis_hcount' displayText='ShareThis'></span>
+<span class='st_facebook_hcount' displayText='Facebook'></span>
+<span class='st_twitter_hcount' displayText='Tweet'></span>
+<span class='st_linkedin_hcount' displayText='LinkedIn'></span>
+<span class='st_pinterest_hcount' displayText='Pinterest'></span>
+<span class='st_email_hcount' displayText='Email'></span>
              <% if user_signed_in? %>
                   <% if current_user.admin? %>
+
  <%= link_to 'Destroy', welcome, method: :delete, data: { confirm: 'Are you sure?' } %>
  <%= link_to 'Show', welcome %>
  <%= link_to 'Edit', edit_welcome_path(welcome) %>
