@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :indices
   get 'index/index'
 
   resources :welcomes
